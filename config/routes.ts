@@ -42,6 +42,19 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/quan-ly',
+		name: 'Quản lý',
+		icon: 'UserOutlined',
+		routes: [
+			{
+				path: '/quan-ly/nguoi-dung',
+				name: 'Người dùng',
+				component: './QuanLy/NguoiDung',
+			}
+		]
+	},
+
 
 	// DANH MUC HE THONG
 	// {
