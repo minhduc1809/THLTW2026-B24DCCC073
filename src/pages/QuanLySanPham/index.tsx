@@ -50,7 +50,7 @@ const SanPham = () => {
     return (
         <div>
             <Card title="Quản lý Sản phẩm" extra={<Button type="primary" icon={<PlusOutlined />} onClick={() => openModal()}>Thêm SP</Button>}>
-                <Space direction="vertical" size="middle">
+                <Space direction="vertical" size="middle" style={{ width: '100%' }}>
                     <Row gutter={[16, 16]}>
                         <Col span={6}><Input prefix={<SearchOutlined />} placeholder="Tìm tên..." onChange={e => setSearch(e.target.value)} /></Col>
                         <Col span={4}><Select placeholder="Danh mục" allowClear onChange={setCategory}>{
@@ -59,7 +59,7 @@ const SanPham = () => {
                         <Col span={6}>
                             <Space direction="vertical" size={0}>
                                 <Text type="secondary">Khoảng giá: {fmt(priceRange[0])} - {fmt(priceRange[1])}</Text>
-                                <Slider range max={100000000} step={1000000} value={priceRange} onChange={(v: [number, number]) => setPrice(v)} tipFormatter={fmt} />
+                                <Slider range max={100000000} step={1000000} value={priceRange} onChange={(v: number | number[]) => setPrice(v as [number, number])} tipFormatter={fmt} />
                             </Space>
                         </Col>
                         <Col span={4}><Select placeholder="Trạng thái" allowClear onChange={setStatus}>
