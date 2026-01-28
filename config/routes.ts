@@ -48,6 +48,12 @@
 		icon: 'AppstoreAddOutlined',
 		component: './QuanLySanPham',
 	},
+	{
+		path: '/quan-ly-don-hang',
+		name: 'QuanLyDonHang',
+		icon: 'ShoppingOutlined',
+		component: './QuanLyDonHang',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
