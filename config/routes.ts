@@ -42,31 +42,20 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+
 	{
-		path: '/quan-ly-san-pham',
-		name: 'QuanLySanPham',
-		icon: 'AppstoreAddOutlined',
-		component: './QuanLySanPham',
+		path: '/game-doan-so',
+		name: 'GameDoanSo',
+		icon: 'PlayCircleOutlined',
+		component: './GameDoanSo',
 	},
 	{
-		path: '/quan-ly-don-hang',
-		name: 'QuanLyDonHang',
-		icon: 'ShoppingOutlined',
-		component: './QuanLyDonHang',
+		path: '/quan-ly-hoc-tap',
+		name: 'QuanLyHocTap',
+		icon: 'BookOutlined',
+		component: './QuanLyHocTap',
 	},
-	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
+
 
 	{
 		path: '/notification',
