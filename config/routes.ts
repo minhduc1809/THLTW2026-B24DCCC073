@@ -42,6 +42,16 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/oan-tu-ti',
+		name: 'Oẳn Tù Tì',
+		component: './OanTuTi',
+	},
+	{
+		path: '/ngan-hang-cau-hoi',
+		name: 'Ngân Hàng Câu Hỏi',
+		component: './NganHangCauHoi',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
