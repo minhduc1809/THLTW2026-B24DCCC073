@@ -26,7 +26,7 @@ tinymce.addI18n('vi_VN', {
   'Increase indent': 'L\u00f9i v\u00e0o',
   Close: '\u0110\u00f3ng',
   Formats: '\u0110\u1ecbnh d\u1ea1ng',
-  "Your browser doesn't support direct access to the clipboard. Please use the Ctrl+X/C/V keyboard shortcuts instead.":
+  'Your browser doesn\'t support direct access to the clipboard. Please use the Ctrl+X/C/V keyboard shortcuts instead.':
     'Tr\u00ecnh duy\u1ec7t c\u1ee7a b\u1ea1n kh\u00f4ng h\u1ed7 tr\u1ee3 truy c\u1eadp clipboard, vui l\u00f2ng s\u1eed d\u1ee5ng c\u00e1c t\u1ed5 h\u1ee3p Ctrl + X, C, V.',
   Headers: '\u0110\u1ea7u trang',
   'Header 1': 'Ti\u00eau \u0111\u1ec1 1',
