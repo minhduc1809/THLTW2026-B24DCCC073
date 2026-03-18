@@ -31,17 +31,30 @@
 		hideInMenu: true,
 	},
 	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
+		path: '/quan-ly-nhan-vien-dich-vu',
+		name: 'Quản Lý Nhân Viên & Dịch Vụ',
+		component: './QuanLyNhanVien&DichVu',
+		icon: 'UserSwitchOutlined',
 	},
 	{
-		path: '/todo-list',
-		name: 'TodoList',
-		icon: 'OrderedListOutlined',
-		component: './TodoList',
+		path: '/quan-ly-lich-hen',
+		name: 'Quản Lý Lịch Hẹn',
+		icon: 'CalendarOutlined',
+		component: './QuanLyLichHen',
 	},
+	{
+		path: '/danh-gia-dich-vu-nhan-vien',
+		name: 'Đánh Giá Dịch Vụ & Nhân Viên',
+		icon: 'StarOutlined',
+		component: './DanhGiaDichVu&NhanVien',
+	},
+	{
+		path: '/thong-ke-va-bao-cao',
+		name: 'Thống Kê & Báo Cáo',
+		icon: 'BarChartOutlined',
+		component: './ThongKeVaBaoCao',
+	},
+
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
