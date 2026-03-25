@@ -25,6 +25,39 @@ export default [
 		icon: 'HomeOutlined',
 	},
 	{
+		path: '/quan-ly-van-bang',
+		name: 'Quản lý văn bằng',
+		icon: 'SolutionOutlined',
+		routes: [
+			{
+				path: '/quan-ly-van-bang/so-van-bang',
+				name: 'Quản lý sổ văn bằng',
+				component: './VanBang/SoVanBang',
+			},
+			{
+				path: '/quan-ly-van-bang/quyet-dinh',
+				name: 'Quyết định tốt nghiệp',
+				component: './VanBang/QuyetDinh',
+			},
+			{
+				path: '/quan-ly-van-bang/bieu-mau',
+				name: 'Cấu hình biểu mẫu',
+				component: './VanBang/BieuMau',
+			},
+			{
+				path: '/quan-ly-van-bang/thong-tin',
+				name: 'Thông tin văn bằng',
+				component: './VanBang/ThongTinVanBang',
+			},
+		],
+	},
+	{
+		path: '/tra-cuu-van-bang',
+		name: 'Tra cứu văn bằng',
+		icon: 'SearchOutlined',
+		component: './VanBang/TraCuuVanBang',
+	},
+	{
 		path: '/gioi-thieu',
 		name: 'About',
 		component: './TienIch/GioiThieu',
