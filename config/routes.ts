@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -31,17 +31,33 @@
 		hideInMenu: true,
 	},
 	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
+		name: 'Quản lý Câu lạc bộ',
+		path: '/quan-ly-cau-lac-bo',
+		icon: 'team',
+		routes: [
+			{
+				name: 'Câu lạc bộ',
+				path: 'danh-sach',
+				component: './CauLacBo',
+			},
+			{
+				name: 'Đơn đăng ký',
+				path: 'don-dang-ky',
+				component: './DonDangKy',
+			},
+			{
+				name: 'Thành viên',
+				path: 'thanh-vien',
+				component: './ThanhVienCLB',
+			},
+			{
+				name: 'Báo cáo thống kê',
+				path: 'bao-cao',
+				component: './BaoCaoThongKe',
+			},
+		],
 	},
-	{
-		path: '/todo-list',
-		name: 'TodoList',
-		icon: 'OrderedListOutlined',
-		component: './TodoList',
-	},
+
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
