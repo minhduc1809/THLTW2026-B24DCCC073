@@ -57,7 +57,6 @@ declare module DuLichNganSach {
 	export interface IRecord {
 		_id: string;
 		idLichTrinh?: string;
-		ten: string;
 		danhMuc: IDanhMucNganSach[];
 		createdAt: string;
 	}
