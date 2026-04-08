@@ -8,4 +8,10 @@ export default {
   'menu.DanhMuc': 'Danh mục',
   'menu.DanhMuc.ChucVu': 'Chức vụ',
   'menu.DanhMuc.LoaiPhongBan': 'Loại phòng ban',
+
+  'menu.DuLich': 'Travel Planner',
+  'menu.DuLich.KhamPha': 'Explore Destinations',
+  'menu.DuLich.LichTrinh': 'Itineraries',
+  'menu.DuLich.NganSach': 'Budget',
+  'menu.DuLich.AdminDuLich': 'Admin',
 };

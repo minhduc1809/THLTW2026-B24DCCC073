@@ -15,9 +15,6 @@
 			},
 		],
 	},
-
-	///////////////////////////////////
-	// DEFAULT MENU
 	{
 		path: '/dashboard',
 		name: 'Dashboard',
@@ -31,30 +28,36 @@
 		hideInMenu: true,
 	},
 	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
+		name: 'DuLich',
+		path: '/du-lich',
+		icon: 'CompassOutlined',
+		routes: [
+			{
+				path: '/du-lich',
+				redirect: '/du-lich/kham-pha',
+			},
+			{
+				name: 'KhamPha',
+				path: 'kham-pha',
+				component: './DuLich/KhamPha',
+			},
+			{
+				name: 'LichTrinh',
+				path: 'lich-trinh',
+				component: './DuLich/LichTrinh',
+			},
+			{
+				name: 'NganSach',
+				path: 'ngan-sach',
+				component: './DuLich/NganSach',
+			},
+			{
+				name: 'AdminDuLich',
+				path: 'admin',
+				component: './DuLich/Admin',
+			},
+		],
 	},
-	{
-		path: '/todo-list',
-		name: 'TodoList',
-		icon: 'OrderedListOutlined',
-		component: './TodoList',
-	},
-	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
 
 	{
 		path: '/notification',
