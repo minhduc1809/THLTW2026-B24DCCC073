@@ -1,4 +1,4 @@
-import { ROOM_TYPE_OPTIONS } from '@/constants/enum';
+import { ROOM_MANAGER_LIST, ROOM_MANAGER_OPTIONS, ROOM_TYPE_OPTIONS } from '@/constants/enum';
 import { getRooms } from '@/services/room';
 import type { Room, RoomPayload } from '@/types/room';
 import rules from '@/utils/rules';
@@ -60,6 +60,18 @@ const capacityRangeWarningRule = {
 	},
 };
 
+const managerInListRule = {
+	validator: async (_: unknown, value: string | undefined) => {
+		if (!value) return Promise.resolve();
+
+		if (!ROOM_MANAGER_LIST.includes(value as (typeof ROOM_MANAGER_LIST)[number])) {
+			return Promise.reject(new Error('Người phụ trách phải chọn từ danh sách'));
+		}
+
+		return Promise.resolve();
+	},
+};
+
 const buildFormRules = (rooms: Room[], editingRoomId?: string) => ({
 	code: [
 		...rules.required,
@@ -75,7 +87,7 @@ const buildFormRules = (rooms: Room[], editingRoomId?: string) => ({
 	],
 	capacity: [...rules.required, ...rules.number(200, 10, false), capacityRangeWarningRule],
 	type: [...rules.required],
-	manager: [...rules.required, ...rules.text, ...rules.length(120)],
+	manager: [...rules.required, managerInListRule],
 });
 
 const RoomForm = ({ visible, rooms, editingRoom, submitting = false, onCancel, onSubmit }: RoomFormProps) => {
@@ -138,7 +150,12 @@ const RoomForm = ({ visible, rooms, editingRoom, submitting = false, onCancel, o
 				</Form.Item>
 
 				<Form.Item name='manager' label='Người phụ trách' rules={formRules.manager}>
-					<Input placeholder='Ví dụ: Nguyễn Văn A' maxLength={120} />
+					<Select
+						showSearch
+						optionFilterProp='label'
+						placeholder='Chọn người phụ trách'
+						options={ROOM_MANAGER_OPTIONS}
+					/>
 				</Form.Item>
 			</Form>
 		</Modal>
