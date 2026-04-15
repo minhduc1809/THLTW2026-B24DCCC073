@@ -25,22 +25,16 @@
 		icon: 'HomeOutlined',
 	},
 	{
+		path: '/room',
+		name: 'Room',
+		component: './Room',
+		icon: '',
+	},
+	{
 		path: '/gioi-thieu',
 		name: 'About',
 		component: './TienIch/GioiThieu',
 		hideInMenu: true,
-	},
-	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
-	},
-	{
-		path: '/todo-list',
-		name: 'TodoList',
-		icon: 'OrderedListOutlined',
-		component: './TodoList',
 	},
 	// DANH MUC HE THONG
 	// {
