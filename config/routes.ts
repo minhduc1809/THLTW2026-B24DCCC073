@@ -30,18 +30,6 @@
 		component: './TienIch/GioiThieu',
 		hideInMenu: true,
 	},
-	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
-	},
-	{
-		path: '/todo-list',
-		name: 'TodoList',
-		icon: 'OrderedListOutlined',
-		component: './TodoList',
-	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
@@ -77,6 +65,39 @@
 		],
 		layout: false,
 		hideInMenu: true,
+	},
+	{
+		path: '/blog',
+		name: 'Blog',
+		icon: 'ReadOutlined',
+		routes: [
+			{
+				path: '/blog',
+				exact: true,
+				name: 'Trang chủ Blog',
+				component: './Blog',
+			},
+			{
+				path: '/blog/about',
+				name: 'Giới thiệu',
+				component: './Blog/About',
+			},
+			{
+				path: '/blog/admin/posts',
+				name: 'Quản lý bài viết',
+				component: './Blog/Admin/Posts',
+			},
+			{
+				path: '/blog/admin/tags',
+				name: 'Quản lý thẻ',
+				component: './Blog/Admin/Tags',
+			},
+			{
+				path: '/blog/:slug',
+				component: './Blog/Detail',
+				hideInMenu: true,
+			},
+		],
 	},
 	{
 		path: '/',
