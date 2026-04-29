@@ -1,5 +1,9 @@
 ﻿export default [
 	{
+		path: '/',
+		redirect: '/dashboard',
+	},
+	{
 		path: '/user',
 		layout: false,
 		routes: [
@@ -20,41 +24,34 @@
 	// DEFAULT MENU
 	{
 		path: '/dashboard',
-		name: 'Dashboard',
-		component: './TrangChu',
+		name: 'Bảng điều khiển',
+		component: './dashboard',
 		icon: 'HomeOutlined',
 	},
 	{
-		path: '/gioi-thieu',
-		name: 'About',
-		component: './TienIch/GioiThieu',
-		hideInMenu: true,
+		path: '/workout-log',
+		name: 'Nhật ký tập luyện',
+		component: './workout-log',
+		icon: 'ProfileOutlined',
 	},
 	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
+		path: '/health-metrics',
+		name: 'Chỉ số sức khỏe',
+		component: './health-metrics',
+		icon: 'HeartOutlined',
 	},
 	{
-		path: '/todo-list',
-		name: 'TodoList',
-		icon: 'OrderedListOutlined',
-		component: './TodoList',
+		path: '/goals',
+		name: 'Mục tiêu',
+		component: './goals',
+		icon: 'AimOutlined',
 	},
-	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
+	{
+		path: '/exercise-library',
+		name: 'Thư viện bài tập',
+		component: './exercise-library',
+		icon: 'BookOutlined',
+	},
 
 	{
 		path: '/notification',
@@ -77,9 +74,6 @@
 		],
 		layout: false,
 		hideInMenu: true,
-	},
-	{
-		path: '/',
 	},
 	{
 		path: '/403',

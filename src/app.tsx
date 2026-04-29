@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer';
 import RightContent from '@/components/RightContent';
 import { notification } from 'antd';
-import 'moment/locale/vi';
+import moment from 'moment';
 import type { RequestConfig, RunTimeLayoutConfig } from 'umi';
 import { getIntl, getLocale, history } from 'umi';
 import type { RequestOptionsInit, ResponseError } from 'umi-request';
@@ -13,9 +13,12 @@ import OneSignalBounder from './components/OneSignalBounder';
 import TechnicalSupportBounder from './components/TechnicalSupportBounder';
 import NotAccessible from './pages/exception/403';
 import NotFoundContent from './pages/exception/404';
+import { initSampleData } from './services/storage';
 import type { IInitialState } from './services/base/typing';
 import './styles/global.less';
 import { currentRole } from './utils/ip';
+
+moment.locale('vi');
 
 /**  loading */
 export const initialStateConfig = {
@@ -27,6 +30,7 @@ export const initialStateConfig = {
  * // Tobe removed
  * */
 export async function getInitialState(): Promise<IInitialState> {
+	initSampleData();
 	return {
 		permissionLoading: true,
 	};
