@@ -117,6 +117,7 @@ const DashboardPage = () => {
 							<DonutChart
 								xAxis={[priorityLabels.High, priorityLabels.Medium, priorityLabels.Low]}
 								yAxis={[[priorityCounts.High, priorityCounts.Medium, priorityCounts.Low]]}
+								yLabel={['Số lượng']}
 								colors={[priorityColors.High, priorityColors.Medium, priorityColors.Low]}
 								showTotal
 								height={320}
