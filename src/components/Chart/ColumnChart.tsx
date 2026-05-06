@@ -8,6 +8,7 @@ import vi from './vi.json';
 
 const ColumnChart = (props: DataChartType) => {
 	const { title, xAxis, yAxis, yLabel, height, type, formatY, colors, otherOptions } = props;
+	const isDistributed = Boolean(otherOptions?.plotOptions?.bar && otherOptions?.plotOptions?.bar?.distributed);
 
 	const options: ApexOptions = {
 		chart: {
@@ -76,16 +77,23 @@ const ColumnChart = (props: DataChartType) => {
 				formatter: (val: number) => (formatY ? formatY(val) : tienVietNam(val)),
 			},
 		},
+		colors,
 	};
 
 	const series = yLabel.map((y, index) => ({
 		name: y,
 		data: yAxis?.[index] || [],
-		color: colors?.[index] ?? primaryColor,
+		color: isDistributed ? undefined : colors?.[index] ?? primaryColor,
 	}));
 
 	return (
-		<Chart options={{ ...options, ...otherOptions }} series={series} type={type ?? 'bar'} height={height ?? 350} />
+		<Chart
+			options={{ ...options, ...otherOptions }}
+			series={series}
+			type={type ?? 'bar'}
+			height={height ?? 350}
+			width='100%'
+		/>
 	);
 };
 

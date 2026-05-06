@@ -1,8 +1,8 @@
 import { type ApexOptions } from 'apexcharts';
 
-export * from './ColumnChart';
-export * from './DonutChart';
-export * from './LineChart';
+export { default as ColumnChart } from './ColumnChart';
+export { default as DonutChart } from './DonutChart';
+export { default as LineChart } from './LineChart';
 
 export type DataChartType = {
 	title?: string;

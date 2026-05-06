@@ -21,8 +21,20 @@
 	{
 		path: '/dashboard',
 		name: 'Dashboard',
-		component: './TrangChu',
+		component: './dashboard',
 		icon: 'HomeOutlined',
+	},
+	{
+		path: '/kanban',
+		name: 'Kanban Board',
+		component: './kanban',
+		icon: 'AppstoreOutlined',
+	},
+	{
+		path: '/task-list',
+		name: 'Danh sách Task',
+		component: './task-list',
+		icon: 'CheckSquareOutlined',
 	},
 	{
 		path: '/gioi-thieu',
@@ -68,6 +80,7 @@
 	},
 	{
 		path: '/',
+		redirect: '/dashboard',
 	},
 	{
 		path: '/403',
